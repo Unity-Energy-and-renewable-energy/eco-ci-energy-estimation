@@ -41,6 +41,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          # For blame information
+          fetch-depth: 0
+          
       - name: Analyze with SonarQube
 
         # You can pin the exact commit or the version.
